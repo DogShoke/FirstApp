@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:gravity="center">
+            <Button
+                android:id="@+id/MyButton"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:text="Click me!"
+                android:textSize="35sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/ET"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/LLtext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/green"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/Tv"
+                android:layout_width="170dp"
+                android:layout_height="100dp"
+                android:text="@string/TV"
+                android:textSize="35sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/purple"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/Pic"
+                android:layout_width="170dp"
+                android:layout_height="190dp"
+                android:background="@drawable/ea"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
