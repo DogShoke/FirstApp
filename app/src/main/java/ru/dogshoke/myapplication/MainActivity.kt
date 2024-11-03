@@ -65,7 +65,10 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
             }
         })
-        fun View.setOnDoubleClickListener(doubleClickInterval: Long = 500, onDoubleClick: (View) -> Unit) {
+        fun View.setOnDoubleClickListener(
+            doubleClickInterval: Long = 500,
+            onDoubleClick: (View) -> Unit
+        ) {
             var lastClickTime = 0L
             this.setOnClickListener { view ->
                 val currentTime = SystemClock.elapsedRealtime()
@@ -75,16 +78,17 @@ class MainActivity : AppCompatActivity() {
                 lastClickTime = currentTime
             }
         }
+
         var flag = 0
         var picture = findViewById<ImageView>(R.id.Pic)
-        picture.setOnDoubleClickListener{
-            if(flag == 0){
-                picture.visibility = View.GONE
-                flag = 1
-            }else{
-                flag = 0
-                picture.visibility = View.VISIBLE
-            }
+        picture.setOnDoubleClickListener {
+            picture.visibility = View.INVISIBLE
+        }
+
+
+        var LL2 = findViewById<LinearLayout>(R.id.LLImage)
+        LL2.setOnDoubleClickListener {
+            picture.visibility = View.VISIBLE
         }
     }
 }
